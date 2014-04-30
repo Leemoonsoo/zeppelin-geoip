@@ -1,0 +1,5 @@
+<%# This is handled by Zeppelin Driver
+ADD FILE /usr/share/GeoIP/GeoLiteCity.dat;
+ADD JAR /usr/lib/hive/lib/hive-udfs-assembly-0.0.1.jar;
+>
+CREATE TEMPORARY FUNCTION geocode_ip AS 'com.sharethrough.hive.udfs.GeocodeIP';
